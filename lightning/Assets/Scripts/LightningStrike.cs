@@ -40,11 +40,15 @@ public class LightningStrike : MonoBehaviour
             if (hitCollider.CompareTag("Player"))
             {
                 // Player hit by lightning!
-                PlayerController player = hitCollider.GetComponent<PlayerController>();
-                if (player != null)
+                PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
                 {
-                    // For now, just log it. Later we'll add health/death system
-                    Debug.Log("Player struck by lightning!");
+                    playerHealth.TakeDamage(1);
+                    Debug.Log("Player struck by lightning and took damage!");
+                }
+                else
+                {
+                    Debug.Log("Player hit but no PlayerHealth component found!");
                 }
             }
         }

@@ -4989,7 +4989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45be1c0465308048bc808259efaf3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageRadius: 2
+  damageRadius: 5
   lifetime: 1
   scaleCurve:
     serializedVersion: 2
